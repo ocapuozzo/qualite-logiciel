@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
 <meta name="description" content="concepts qualité du lociel">
-<meta name="author" content="auteur">
+<meta name="author" content="O. Capuozzo">
 <title>Notion de qualité du logiciel</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <link rel="stylesheet" href="./asciidoctor.css">
@@ -17,7 +17,7 @@
 <div id="header">
 <h1>Notion de qualité du logiciel</h1>
 <div class="details">
-<span id="author" class="author">auteur</span><br>
+<span id="author" class="author">O. Capuozzo</span><br>
 <span id="revnumber">version 1.0,</span>
 <span id="revdate">2020-04-17</span>
 <br><span id="revremark">Version asciidoc</span>
@@ -39,6 +39,17 @@
 <li><a href="#ponctualité">Ponctualité</a></li>
 <li><a href="#documentation">Documentation</a></li>
 <li><a href="#securitaire">Securitaire</a></li>
+<li><a href="#facteurs-contradictoires">Facteurs contradictoires</a>
+<ul class="sectlevel2">
+<li><a href="#difficiles-compatibilités-et-compromis">Difficiles compatibilités et Compromis</a></li>
+</ul>
+</li>
+<li><a href="#qualités-essentielles">Qualités essentielles</a>
+<ul class="sectlevel2">
+<li><a href="#fiabilité">Fiabilité</a></li>
+<li><a href="#modularité">Modularité</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -626,6 +637,68 @@ par défaut de connexions à une base de données  (par exemple (<a href="https:
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="facteurs-contradictoires"><a class="anchor" href="#facteurs-contradictoires"></a>Facteurs contradictoires</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Durant la vie d&#8217;un projet, il est souvent question de compromis, et
+facteurs de qualité en font partie.</p>
+</div>
+<div class="sect2">
+<h3 id="difficiles-compatibilités-et-compromis"><a class="anchor" href="#difficiles-compatibilités-et-compromis"></a>Difficiles compatibilités et Compromis</h3>
+<div class="paragraph">
+<p>Certaines qualités sont difficilement compatibles :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Efficacité et  Portabilité</p>
+</li>
+<li>
+<p>Couverture Fonctionnelle et Facilité d&#8217;utilisation</p>
+</li>
+<li>
+<p>Ponctualité et Couverture Fonctionnelle, Extensibilité</p>
+</li>
+<li>
+<p>Robustesse et Facilité d&#8217;utilisation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>De ce fait, le développeur doit parfois (souvent ?), faire des choix (compromis concertés),
+mais il y a une qualité pour laquelle le compromis n&#8217;est pas négociable : la correction !</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="qualités-essentielles"><a class="anchor" href="#qualités-essentielles"></a>Qualités essentielles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les qualités généralement attendues d&#8217;un logiciel est sa <em>fiabilité</em> et sa <em>souplesse d&#8217;adaptation</em>.</p>
+</div>
+<div class="sect2">
+<h3 id="fiabilité"><a class="anchor" href="#fiabilité"></a>Fiabilité</h3>
+<div class="paragraph">
+<p>La <strong>Correction</strong> et <strong>Robustesse</strong> sont les premiers facteurs de qualité.
+Ils définissent ensemble le caractère <strong>fiable</strong> du logiciel.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="modularité"><a class="anchor" href="#modularité"></a>Modularité</h3>
+<div class="paragraph">
+<p>L'<strong>Extensibilité</strong> et la <strong>Réutilisabilité</strong> caractérisent la facilité de modification et d&#8217;évolution.</p>
+</div>
+<div class="paragraph">
+<p>Un composant logiciel généralisé pourra être utilisé dans d&#8217;autres applications.</p>
+</div>
+<div class="paragraph">
+<p>Ces deux qualités sont souvent représentées par le mot : <strong>Modularité</strong></p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="footnotes">
 <hr>
@@ -642,7 +715,7 @@ par défaut de connexions à une base de données  (par exemple (<a href="https:
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2020-04-18 14:14:30 CEST
+Last updated 2020-04-18 17:04:35 CEST
 </div>
 </div>
 </body>

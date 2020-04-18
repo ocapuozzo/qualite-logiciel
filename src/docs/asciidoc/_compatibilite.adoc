@@ -1,0 +1,15 @@
+= Compatibilité
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+====
+ La **compatibilité** est la faculté avec laquelle des éléments logiciels peuvent
+être combinés à d'autres.
+====
+
+Exemple : Les formats de fichier d'un logiciel, incompatible avec d'autres (format dit propriétaire).
+
+Solution : Adopter des standards. Par exemple XML/JSON comme strutures d'échanges, architecture REST, etc.  
+

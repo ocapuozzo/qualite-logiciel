@@ -1,0 +1,57 @@
+= Correction
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+====
+La **correction** est la capacité que possède un produit logiciel de mener à bien sa tâche, telle qu'elle a été définie par sa spécification (le logiciel répond-il aux besoins exprimés ?)
+====
+
+C'est la première qualité attendue, si elle n'est pas remplie alors le reste ne compte pas.
+
+Que ferais-je d'une voiture si elle ne peut pas me transporter d'un endroit à un autre ?
+Sa couleur, l'ergonomie de son tableau de bord sont autant de qualités que je ne saurais
+que faire.
+
+Les méthodes garantissant la correction sont, en général, conditionnées.
+
+On ne réinvente pas la roue à chaque projet. On réutilise des composants techniques et métiers maisons
+que l'on garantie mais aussi de tierces parties, parfois imposés par le client.
+
+Les bibliothèques de base sont parfois écrites dans un autre langage que celui utilisé,
+le compilateur traduit-il correctement le code ?
+Nous trouvons ici deux classes de correction : une _sémantique_ : le sens que le développeur
+prête au code source est-il conforme à la sémantique du langage ? - par exemple  `if ("PARFAIT" == etat)`
+(etat une variable de type String) peut ne pas donner le résultat escompté -  et
+une autre _technique_, concernant la correction de la traduction automatique du code source en un code exécutable.
+
+La chaîne de responsabilités est organisée en tiers (collaboration horizontale) et en couches verticales  :
+
+- Système applicatif
+- Objets métier et technique maison
+- Autres bibliothèques
+- Bibliothèques de base
+- Bibliothèques du noyau
+- Compilateur
+- Système d'exploitation
+- Matériel (micro-processeur.footnote:[https://www.zdnet.fr/actualites/linus-torvalds-parle-en-toute-franchise-des-bugs-de-securite-d-intel-39873065.htm], bus, ..)
+
+
+TIP: La correction est une qualité plus difficile à atteindre qu'il n'y parait. Les tests automatisés, prenant appuie sur les spécifications, participent efficacement à la mesure de la correction.
+
+Un bon logiciel est un logiciel qui procure satisfaction, par exemple la satisfaction
+des utilisateurs pour sa facilité d'utilisation, rapidité, robustesse etc.
+
+Selon la catégorie de l'utilisateur, les critères d'appréciation peuvent variés. Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d'atelier sera plus attentif à l'ergonomie du logiciel qu'à son coût, etc.
+
+La satisfaction est fonction des intérêts de chacun, même si certains, comme la sécurité peuvent être transverses.
+La qualité est une affaire de point de vue. Un informaticien chargé de maintenir le code d'une application, sera sensible à son architecture, à la lisibilité du code source.
+
+Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées **externes** et **internes**.
+
+Les facteurs externes sont ceux perçus par les utilisateurs au sens large, c'est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
+Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d'être, cependant, le seul moyen d'atteindre des niveaux de qualités visibles satisfaisants pour l'utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : facteurs internes.
+
+Voici quelques unes des qualités attendues : correction, facilité d'utilisation, rapidité d'exécution, extensibilité, couverture fonctionnelle, ponctualité, robustesse, réutilisabilité, compatibilité, portabilité, documentation.
+
+**La qualité du logiciel dépend de facteurs externes et facteurs internes.**

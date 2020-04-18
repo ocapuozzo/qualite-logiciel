@@ -1,0 +1,20 @@
+= Facteurs contradictoires
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+Durant la vie d'un projet, il est souvent question de compromis, et
+facteurs de qualité en font partie.
+
+== Difficiles compatibilités et Compromis
+
+Certaines qualités sont difficilement compatibles :
+
+• Efficacité et  Portabilité
+• Couverture Fonctionnelle et Facilité d'utilisation
+• Ponctualité et Couverture Fonctionnelle, Extensibilité
+• Robustesse et Facilité d'utilisation
+
+De ce fait, le développeur doit parfois (souvent ?), faire des choix (compromis concertés),
+mais il y a une qualité pour laquelle le compromis n'est pas négociable : la correction !
+

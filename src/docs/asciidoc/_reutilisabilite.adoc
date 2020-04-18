@@ -1,0 +1,20 @@
+= Réutilisabilité
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+====
+La **réutilisabilité** est la capacité des éléments logiciels à servir à
+la construction de plusieurs applications différentes.
+====
+
+Réutilisation de "bout de code", module, composants logiciels spécialisés appelés objets techniques ou objet métiers.
+
+On pourra s'intéresser au principe suivant :
+
+- DRY : https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas[don’t repeat yourself - wikipedia]
+
+TIP: Certains modèles de conception sont aussi réutilisés, et même catalogués (design patterns.footnote:[Design Patterns est un livre de méthodologie appliquée à la conception logicielle écrit par Erich Gamma, Richard Helm, Ralph Johnson et John Vlissides et publié en 1994 chez Addison-Wesley. Cet ouvrage aborde le sujet de la programmation orientée objet et introduit le concept des patrons de conception. https://fr.wikipedia.org/wiki/Design_Patterns[Wikipédia]])
+ou méta-catalogués (méta-pattern).
+
+

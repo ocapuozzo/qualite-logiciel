@@ -1,0 +1,25 @@
+= Couverture
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+====
+
+la *couverture fonctionnelle* est l'étendue des possibilités offertes par un système.
+====
+
+Il est conseiller, en début de projet, de définir les limites de l'application, d'éviter la "course aux options".
+
+Quelques Conséquences liées à la course aux options :
+
+• L'utilisateur risque de se perdre dans les options
+• Perte de cohérence du produit qui "fait mille choses"
+• Risque de dépassement de budget
+
+
+TIP: Conseil : Introduire de nouvelles fonctions que si les fonctionnalités actuelles offrent entière satisfaction.
+
+On pourra s'interesser à la méthode https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW[*MoSCoW*] dans le but
+d'affecter des *niveaux de priorités* aux exigences.
+

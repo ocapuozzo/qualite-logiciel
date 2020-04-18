@@ -1,0 +1,21 @@
+= Qualités essentielles
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+Les qualités généralement attendues d'un logiciel est sa _fiabilité_ et sa _souplesse d'adaptation_.
+
+
+== Fiabilité
+
+La *Correction* et *Robustesse* sont les premiers facteurs de qualité.
+Ils définissent ensemble le caractère *fiable* du logiciel.
+
+== Modularité
+
+L'*Extensibilité* et la *Réutilisabilité* caractérisent la facilité de modification et d'évolution.
+
+Un composant logiciel généralisé pourra être utilisé dans d'autres applications.
+
+Ces deux qualités sont souvent représentées par le mot : *Modularité*
+

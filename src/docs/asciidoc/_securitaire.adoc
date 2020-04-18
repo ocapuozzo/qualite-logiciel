@@ -1,0 +1,53 @@
+= Securitaire
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+Ce facteur de qualité est à rappocher de celui de link:index.html#robustesse[robustesse],
+sous l'angle de la cyber sécurité.
+
+====
+La qualité **sécuritaire** (_security_) relève de la prise en compte de principes et de bonnes pratiques relatifs à la cyber sécurité.
+====
+
+Exemples liés au développement logiciel en terme de cyber sécurité
+
+
+====
+• *principe de moindre privilège*. Stipule qu’une tâche ne doit bénéficier que des
+privilèges strictement nécessaires à l’exécution du code menant à bien ses fonctionnalités
+
+L'objectif étant de _restreindre les conséquences possibles de comportements inattendus d’un composant, qu’il s’agisse d’un bogue ou de son détournement par un attaquant_ (https://www.ssi.gouv.fr/uploads/2017/12/guide_cloisonnement_systeme_anssi_pg_040_v1.pdf[guide ANSSI sur le cloissement système - 2017])
+====
+
+====
+• *réduction de la surface d'attaque*. _La surface d'attaque ou surface d'exposition est la somme des différents points faibles (les « vecteurs d'attaque ») par lesquels un utilisateur non autorisé (un « pirate ») pourrait potentiellement s'introduire dans un environnement logiciel et en soutirer des données_.footnote:[https://fr.wikipedia.org/wiki/Surface_d%27attaque#R%C3%A9duction_de_la_surface_d'attaque[Surface d'attaque - wikipédia]]
+
+Une approche pour améliorer la sécurité de l'information est de réduire la surface d'attaque d'un système ou d'un logiciel.
+
+Les stratégies de base de réduction d'une surface d'attaque sont les suivants :
+
+- Limitation du nombre de points d'entrée disponibles pour les utilisateurs non approuvés
+- Renforcement du cloisonnement des services relativement peu demandés.
+- Réduction de la quantité de code en cours d'exécution
+
+====
+
+====
+• *défense en profondeur*
+
+_Terme emprunté à une technique militaire destinée à retarder l'ennemi. Consiste à exploiter plusieurs techniques
+indépendantes de sécurité, afin de *réduire le risque* lorsqu'un composant particulier de sécurité est compromis ou défaillant_. Attention cependant
+de ne pas tomber dans le travers de la programmation défensive. Voir : https://fr.wikipedia.org/wiki/D%C3%A9fense_en_profondeur[Défense en profondeur - wikipédia])
+====
+
+====
+
+• *valeurs par défaut sécurisées*.
+
+Ce peut être des valeurs initiales d'un formulaire construit dynamiquement ou  des valeurs
+par défaut de connexions à une base de données  (par exemple (https://www.zdnet.fr/actualites/mongodb-mal-configure-cela-pourrait-vous-couter-cher-39822708.htm[600TB de données MongoDB  exposées sur la toile]), etc.
+
+====
+
+

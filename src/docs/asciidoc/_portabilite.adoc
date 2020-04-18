@@ -1,0 +1,13 @@
+= Portabilité
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+====
+La **portabilité** est la faculté avec laquelle des produits logiciels peuvent être transférés d'un environnement
+logiciel ou matériel à un autre.
+====
+
+Par exemple la capacité d'un logiciel sous Windows à être porté sous Gnu/Linux.
+

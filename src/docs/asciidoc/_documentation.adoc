@@ -1,0 +1,27 @@
+= Documentation
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+====
+La *documentation* est tout ce qui, dans un projet, peut apporter
+du sens, de la conaissance aux autres, à compter par le code source lui-même.
+====
+
+On distingue :
+
+- Documentation *interne* : orientée développeur. Exemples : Code source, JavaDoc, diagrammes UML, pour  une vue architecturale du système permettant d'en apprécier le contenu
+- Documentation d'*API* (interface de module) : Permettre aux développeurs de comprendre les fonctionnalités offertes par un module sans en connaître l'implémentation.
+- Documentation *externe* : orientée utilisateur, mode opératoire, didacticiel et autres... 
+
+[NOTE]
+--
+Ne documentez pas inutilement votre code, mais faites lui communiquer ce qu'il fait par ses propres mots.
+
+[quote, Nicolas Boileau,  1636 - 1711]
+Ce que l'on conçoit bien s'énonce clairement, et les mots pour le dire arrivent aisément.
+
+--
+
+

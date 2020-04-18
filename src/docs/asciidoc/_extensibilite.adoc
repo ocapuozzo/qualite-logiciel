@@ -1,0 +1,27 @@
+= Extensibilité
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+====
+L'**extensibilité** est la facilité d'adaptation des produits logiciels aux changements
+de spécifications.
+====
+
+Un problème d'autant plus pointu que le nombre de lignes de code du logiciel est grand.
+
+Le contexte de forte concurrence, les fusions d'entreprise, l'évolution technologique entraîne souvent des
+changements majeurs des systèmes d'informations. Plus le logiciel est flexible, plus sa
+capacité de s'adapter aux changements de spécifications est forte.
+
+Deux principes essentiels à l'amélioration de l'extensibilité :
+
+- Simplicité de conception : Une architecture simple est plus facile à adapter aux changements
+- Décentralisation : Une répartition des taches en modules les plus autonomes possibles. Ainsi l'adaptation d'un module n'entraîne pas ou très peu de répercussion sur les autres.
+
+On pourra s'interesser aux principes d'eXtrême Programming suivants :
+
+- YAGNI : https://fr.wikipedia.org/wiki/YAGNI
+- KISS : https://fr.wikipedia.org/wiki/Principe_KISS
+

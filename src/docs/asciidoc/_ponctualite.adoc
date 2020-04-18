@@ -1,0 +1,13 @@
+= Ponctualité
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+====
+La *ponctualité* est la capacité d'un système logiciel à être livré au moment désiré par ses utilisateurs, ou avant.
+====
+
+
+Un super produit qui arrive trop tard peut complètement rater sa cible.
+

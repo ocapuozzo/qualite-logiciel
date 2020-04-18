@@ -1,0 +1,25 @@
+= Robustesse
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+
+====
+La **rodustesse**  est la capacité qu'offre des systèmes à réagir de manière
+appropriée à la présence de conditions anormales.
+====
+
+La robustesse complète la correction.
+
+NOTE: Alors que la correction concerne le comportement du système dans des cas conformes à sa spécification,
+la robustesse caractérise ce qui se passe en dehors de cette spécification.
+
+
+Un cas est étiqueté d'**anormal** s'il n'est pas couvert pas la spécification.
+
+Éviter les catastrophes, tendre à la mise en place d'un système garantissant une "dégradation harmonieuse".
+
+Le mécanisme de traitement des exceptions favorise la réalisation de logiciel robuste.
+
+

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.6.1">
+<meta name="description" content="concepts qualité du lociel">
+<meta name="author" content="auteur">
+<title>Notion de qualité du logiciel</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="./coderay-asciidoctor.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Notion de qualité du logiciel</h1>
+<div class="details">
+<span id="author" class="author">auteur</span><br>
+<span id="revnumber">version 1.0,</span>
+<span id="revdate">2020-04-17</span>
+<br><span id="revremark">Version asciidoc</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table des matieres</div>
+<ul class="sectlevel1">
+<li><a href="#présentation">Présentation</a></li>
+<li><a href="#notion-de-qualité-du-logiciel">Notion de qualité du logiciel</a></li>
+<li><a href="#correction">Correction</a></li>
+<li><a href="#robustesse">Robustesse</a></li>
+<li><a href="#extensibilité">Extensibilité</a></li>
+<li><a href="#réutilisabilité">Réutilisabilité</a></li>
+<li><a href="#compatibilité">Compatibilité</a></li>
+<li><a href="#efficacité">Efficacité</a></li>
+<li><a href="#portabilité">Portabilité</a></li>
+<li><a href="#ux-expérience-utilisateur">UX (expérience utilisateur)</a></li>
+<li><a href="#couverture">Couverture</a></li>
+<li><a href="#ponctualité">Ponctualité</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#securitaire">Securitaire</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="présentation"><a class="anchor" href="#présentation"></a>Présentation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>En mars 2020, Google publie <a href="https://static.googleusercontent.com/media/landing.google.com/en//sre/static/pdf/SRS.pdf">Building Secure and Reliable Systems</a>.</p>
+</div>
+<div class="paragraph">
+<p>En préface, le livre démarre par cette question : "<em>un système peut-il être considéré comme vraiment fiable [reliable] s&#8217;il n&#8217;est pas fondamentalement sûr [secure] ? Ou peut-il être considéré comme sûr s&#8217;il n&#8217;est pas fiable ?</em>"</p>
+</div>
+<div class="paragraph">
+<p>Sont présentés ici, dans les grandes lignes, des critèques relatifs à la qualité du logiciel.
+Nous invitons le lecteur à approfondir ce thème par l&#8217;ouvrage de référence,
+sur lequel cette étude est principalement basée, <a href="https://www.eyrolles.com/Informatique/Livre/conception-et-programmation-orientees-objet-9782212675009/">Conception et Programmation orientées objet (Bertrand Meyer)</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="notion-de-qualité-du-logiciel"><a class="anchor" href="#notion-de-qualité-du-logiciel"></a>Notion de qualité du logiciel</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Un bon logiciel est un logiciel qui procure satisfaction,
+par exemple la satisfaction des utilisateurs pour sa facilité d&#8217;utilisation, rapidité, robustesse etc.</p>
+</div>
+<div class="paragraph">
+<p>Selon la catégorie de l&#8217;utilisateur, les critères d&#8217;appréciation peuvent variés. Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d&#8217;atelier sera plus attentif à l&#8217;ergonomie du logiciel qu&#8217;à son coût, etc.</p>
+</div>
+<div class="paragraph">
+<p>La satisfaction est fonction des intérêts de chacun, même si certains, comme la sécurité peuvent être transverses.
+La qualité est une affaire de point de vue. Un informaticien chargé de maintenir le code d&#8217;une application, sera sensible à son architecture, à la lisibilité du code source.</p>
+</div>
+<div class="paragraph">
+<p>Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées <strong>externes</strong> et <strong>internes</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Les facteurs externes sont ceux perçus par les utilisateurs au sens large, c&#8217;est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
+Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d&#8217;être, cependant, le seul moyen d&#8217;atteindre des niveaux de qualités visibles satisfaisants pour l&#8217;utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : facteurs internes.</p>
+</div>
+<div class="paragraph">
+<p>Voici quelques unes des qualités attendues : correction, facilité d&#8217;utilisation, rapidité d&#8217;exécution, extensibilité, couverture fonctionnelle, ponctualité, robustesse, réutilisabilité, compatibilité, portabilité, documentation.</p>
+</div>
+<div class="paragraph">
+<p><strong>La qualité du logiciel dépend de facteurs externes et facteurs internes.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="correction"><a class="anchor" href="#correction"></a>Correction</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La <strong>correction</strong> est la capacité que possède un produit logiciel de mener à bien sa tâche, telle qu&#8217;elle a été définie par sa spécification (le logiciel répond-il aux besoins exprimés ?)</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>C&#8217;est la première qualité attendue, si elle n&#8217;est pas remplie alors le reste ne compte pas.</p>
+</div>
+<div class="paragraph">
+<p>Que ferais-je d&#8217;une voiture si elle ne peut pas me transporter d&#8217;un endroit à un autre ?
+Sa couleur, l&#8217;ergonomie de son tableau de bord sont autant de qualités que je ne saurais
+que faire.</p>
+</div>
+<div class="paragraph">
+<p>Les méthodes garantissant la correction sont, en général, conditionnées.</p>
+</div>
+<div class="paragraph">
+<p>On ne réinvente pas la roue à chaque projet. On réutilise des composants techniques et métiers maisons
+que l&#8217;on garantie mais aussi de tierces parties, parfois imposés par le client.</p>
+</div>
+<div class="paragraph">
+<p>Les bibliothèques de base sont parfois écrites dans un autre langage que celui utilisé,
+le compilateur traduit-il correctement le code ?
+Nous trouvons ici deux classes de correction : une <em>sémantique</em> : le sens que le développeur
+prête au code source est-il conforme à la sémantique du langage ? - par exemple  <code>if ("PARFAIT" == etat)</code>
+(etat une variable de type String) peut ne pas donner le résultat escompté -  et
+une autre <em>technique</em>, concernant la correction de la traduction automatique du code source en un code exécutable.</p>
+</div>
+<div class="paragraph">
+<p>La chaîne de responsabilités est organisée en tiers (collaboration horizontale) et en couches verticales  :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Système applicatif</p>
+</li>
+<li>
+<p>Objets métier et technique maison</p>
+</li>
+<li>
+<p>Autres bibliothèques</p>
+</li>
+<li>
+<p>Bibliothèques de base</p>
+</li>
+<li>
+<p>Bibliothèques du noyau</p>
+</li>
+<li>
+<p>Compilateur</p>
+</li>
+<li>
+<p>Système d&#8217;exploitation</p>
+</li>
+<li>
+<p>Matériel (micro-processeur.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>, bus, ..)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+La correction est une qualité plus difficile à atteindre qu&#8217;il n&#8217;y parait. Les tests automatisés, prenant appuie sur les spécifications, participent efficacement à la mesure de la correction.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Un bon logiciel est un logiciel qui procure satisfaction, par exemple la satisfaction
+des utilisateurs pour sa facilité d&#8217;utilisation, rapidité, robustesse etc.</p>
+</div>
+<div class="paragraph">
+<p>Selon la catégorie de l&#8217;utilisateur, les critères d&#8217;appréciation peuvent variés. Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d&#8217;atelier sera plus attentif à l&#8217;ergonomie du logiciel qu&#8217;à son coût, etc.</p>
+</div>
+<div class="paragraph">
+<p>La satisfaction est fonction des intérêts de chacun, même si certains, comme la sécurité peuvent être transverses.
+La qualité est une affaire de point de vue. Un informaticien chargé de maintenir le code d&#8217;une application, sera sensible à son architecture, à la lisibilité du code source.</p>
+</div>
+<div class="paragraph">
+<p>Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées <strong>externes</strong> et <strong>internes</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Les facteurs externes sont ceux perçus par les utilisateurs au sens large, c&#8217;est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
+Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d&#8217;être, cependant, le seul moyen d&#8217;atteindre des niveaux de qualités visibles satisfaisants pour l&#8217;utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : facteurs internes.</p>
+</div>
+<div class="paragraph">
+<p>Voici quelques unes des qualités attendues : correction, facilité d&#8217;utilisation, rapidité d&#8217;exécution, extensibilité, couverture fonctionnelle, ponctualité, robustesse, réutilisabilité, compatibilité, portabilité, documentation.</p>
+</div>
+<div class="paragraph">
+<p><strong>La qualité du logiciel dépend de facteurs externes et facteurs internes.</strong></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="robustesse"><a class="anchor" href="#robustesse"></a>Robustesse</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La <strong>rodustesse</strong>  est la capacité qu&#8217;offre des systèmes à réagir de manière
+appropriée à la présence de conditions anormales.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>La robustesse complète la correction.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Alors que la correction concerne le comportement du système dans des cas conformes à sa spécification,
+la robustesse caractérise ce qui se passe en dehors de cette spécification.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Un cas est étiqueté d'<strong>anormal</strong> s&#8217;il n&#8217;est pas couvert pas la spécification.</p>
+</div>
+<div class="paragraph">
+<p>Éviter les catastrophes, tendre à la mise en place d&#8217;un système garantissant une "dégradation harmonieuse".</p>
+</div>
+<div class="paragraph">
+<p>Le mécanisme de traitement des exceptions favorise la réalisation de logiciel robuste.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="extensibilité"><a class="anchor" href="#extensibilité"></a>Extensibilité</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>L'<strong>extensibilité</strong> est la facilité d&#8217;adaptation des produits logiciels aux changements
+de spécifications.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Un problème d&#8217;autant plus pointu que le nombre de lignes de code du logiciel est grand.</p>
+</div>
+<div class="paragraph">
+<p>Le contexte de forte concurrence, les fusions d&#8217;entreprise, l&#8217;évolution technologique entraîne souvent des
+changements majeurs des systèmes d&#8217;informations. Plus le logiciel est flexible, plus sa
+capacité de s&#8217;adapter aux changements de spécifications est forte.</p>
+</div>
+<div class="paragraph">
+<p>Deux principes essentiels à l&#8217;amélioration de l&#8217;extensibilité :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simplicité de conception : Une architecture simple est plus facile à adapter aux changements</p>
+</li>
+<li>
+<p>Décentralisation : Une répartition des taches en modules les plus autonomes possibles. Ainsi l&#8217;adaptation d&#8217;un module n&#8217;entraîne pas ou très peu de répercussion sur les autres.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>On pourra s&#8217;interesser aux principes d&#8217;eXtrême Programming suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>YAGNI : <a href="https://fr.wikipedia.org/wiki/YAGNI" class="bare">https://fr.wikipedia.org/wiki/YAGNI</a></p>
+</li>
+<li>
+<p>KISS : <a href="https://fr.wikipedia.org/wiki/Principe_KISS" class="bare">https://fr.wikipedia.org/wiki/Principe_KISS</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="réutilisabilité"><a class="anchor" href="#réutilisabilité"></a>Réutilisabilité</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La <strong>réutilisabilité</strong> est la capacité des éléments logiciels à servir à
+la construction de plusieurs applications différentes.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Réutilisation de "bout de code", module, composants logiciels spécialisés appelés objets techniques ou objet métiers.</p>
+</div>
+<div class="paragraph">
+<p>On pourra s&#8217;intéresser au principe suivant :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>DRY : <a href="https://fr.wikipedia.org/wiki/Ne_vous_r%C3%A9p%C3%A9tez_pas">don’t repeat yourself - wikipedia</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Certains modèles de conception sont aussi réutilisés, et même catalogués (design patterns.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>)
+ou méta-catalogués (méta-pattern).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="compatibilité"><a class="anchor" href="#compatibilité"></a>Compatibilité</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="literalblock">
+<div class="content">
+<pre> La **compatibilité** est la faculté avec laquelle des éléments logiciels peuvent
+être combinés à d'autres.</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Exemple : Les formats de fichier d&#8217;un logiciel, incompatible avec d&#8217;autres (format dit propriétaire).</p>
+</div>
+<div class="paragraph">
+<p>Solution : Adopter des standards. Par exemple XML/JSON comme strutures d&#8217;échanges, architecture REST, etc.  </p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="efficacité"><a class="anchor" href="#efficacité"></a>Efficacité</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>L'<strong>efficacité</strong> est la capacité d&#8217;un système à utiliser le
+minimum de ressources matérielles.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Les ressources à préserver sont :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>temps machine</em> ,</p>
+</li>
+<li>
+<p><em>espace occupé</em> en mémoire externe et interne,</p>
+</li>
+<li>
+<p><em>bande passante</em> des moyens de communication.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="portabilité"><a class="anchor" href="#portabilité"></a>Portabilité</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La <strong>portabilité</strong> est la faculté avec laquelle des produits logiciels peuvent être transférés d&#8217;un environnement
+logiciel ou matériel à un autre.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Par exemple la capacité d&#8217;un logiciel sous Windows à être porté sous Gnu/Linux.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ux-expérience-utilisateur"><a class="anchor" href="#ux-expérience-utilisateur"></a>UX (expérience utilisateur)</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>L'<strong>expérience utilisateur</strong> (en anglais, user experience, abrégé <strong>UX</strong>)
+est la qualité du vécu de l&#8217;utilisateur dans des environnements numériques ou physiques.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>La <strong>facilité d&#8217;utilisation</strong> est l&#8217;aisance avec laquelle des personnes, de formations et
+de compétences différentes, peuvent apprendre à utiliser les produits
+logiciels et à s&#8217;en servir pour résoudre des problèmes.</p>
+</div>
+<div class="paragraph">
+<p>Sont concernés également la facilité d&#8217;installation, d&#8217;opération et de contrôles.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Principe de conception d&#8217;interface utilisateur : <em><strong>Ne prétendez pas connaître l&#8217;utilisateur ; vous ne le connaissez pas</strong></em>.
+ 
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Conseil : Chercher la simplicité</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="couverture"><a class="anchor" href="#couverture"></a>Couverture</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>la <strong>couverture fonctionnelle</strong> est l&#8217;étendue des possibilités offertes par un système.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Il est conseiller, en début de projet, de définir les limites de l&#8217;application, d&#8217;éviter la "course aux options".</p>
+</div>
+<div class="paragraph">
+<p>Quelques Conséquences liées à la course aux options :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>L&#8217;utilisateur risque de se perdre dans les options</p>
+</li>
+<li>
+<p>Perte de cohérence du produit qui "fait mille choses"</p>
+</li>
+<li>
+<p>Risque de dépassement de budget</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Conseil : Introduire de nouvelles fonctions que si les fonctionnalités actuelles offrent entière satisfaction.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>On pourra s&#8217;interesser à la méthode <a href="https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW"><strong>MoSCoW</strong></a> dans le but
+d&#8217;affecter des <strong>niveaux de priorités</strong> aux exigences.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ponctualité"><a class="anchor" href="#ponctualité"></a>Ponctualité</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La <strong>ponctualité</strong> est la capacité d&#8217;un système logiciel à être livré au moment désiré par ses utilisateurs, ou avant.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Un super produit qui arrive trop tard peut complètement rater sa cible.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="documentation"><a class="anchor" href="#documentation"></a>Documentation</h2>
+<div class="sectionbody">
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La <strong>documentation</strong> est tout ce qui, dans un projet, peut apporter
+du sens, de la conaissance aux autres, à compter par le code source lui-même.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>On distingue :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Documentation <strong>interne</strong> : orientée développeur. Exemples : Code source, JavaDoc, diagrammes UML, pour  une vue architecturale du système permettant d&#8217;en apprécier le contenu</p>
+</li>
+<li>
+<p>Documentation d'<strong>API</strong> (interface de module) : Permettre aux développeurs de comprendre les fonctionnalités offertes par un module sans en connaître l&#8217;implémentation.</p>
+</li>
+<li>
+<p>Documentation <strong>externe</strong> : orientée utilisateur, mode opératoire, didacticiel et autres&#8230;&#8203; </p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Ne documentez pas inutilement votre code, mais faites lui communiquer ce qu&#8217;il fait par ses propres mots.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Ce que l&#8217;on conçoit bien s&#8217;énonce clairement, et les mots pour le dire arrivent aisément.
+</blockquote>
+<div class="attribution">
+&#8212; Nicolas Boileau<br>
+<cite>1636 - 1711</cite>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="securitaire"><a class="anchor" href="#securitaire"></a>Securitaire</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ce facteur de qualité est à rappocher de celui de <a href="index.html#robustesse">robustesse</a>,
+sous l&#8217;angle de la cyber sécurité.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La qualité <strong>sécuritaire</strong> (<em>security</em>) relève de la prise en compte de principes et de bonnes pratiques relatifs à la cyber sécurité.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Exemples liés au développement logiciel en terme de cyber sécurité</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>principe de moindre privilège</strong>. Stipule qu’une tâche ne doit bénéficier que des
+privilèges strictement nécessaires à l’exécution du code menant à bien ses fonctionnalités</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>L&#8217;objectif étant de <em>restreindre les conséquences possibles de comportements inattendus d’un composant, qu’il s’agisse d’un bogue ou de son détournement par un attaquant</em> (<a href="https://www.ssi.gouv.fr/uploads/2017/12/guide_cloisonnement_systeme_anssi_pg_040_v1.pdf">guide ANSSI sur le cloissement système - 2017</a>)</p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>réduction de la surface d&#8217;attaque</strong>. <em>La surface d&#8217;attaque ou surface d&#8217;exposition est la somme des différents points faibles (les « vecteurs d&#8217;attaque ») par lesquels un utilisateur non autorisé (un « pirate ») pourrait potentiellement s&#8217;introduire dans un environnement logiciel et en soutirer des données</em>.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Une approche pour améliorer la sécurité de l&#8217;information est de réduire la surface d&#8217;attaque d&#8217;un système ou d&#8217;un logiciel.</p>
+</div>
+<div class="paragraph">
+<p>Les stratégies de base de réduction d&#8217;une surface d&#8217;attaque sont les suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Limitation du nombre de points d&#8217;entrée disponibles pour les utilisateurs non approuvés</p>
+</li>
+<li>
+<p>Renforcement du cloisonnement des services relativement peu demandés.</p>
+</li>
+<li>
+<p>Réduction de la quantité de code en cours d&#8217;exécution</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>défense en profondeur</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Terme emprunté à une technique militaire destinée à retarder l&#8217;ennemi. Consiste à exploiter plusieurs techniques
+indépendantes de sécurité, afin de <strong>réduire le risque</strong> lorsqu&#8217;un composant particulier de sécurité est compromis ou défaillant</em>. Attention cependant
+de ne pas tomber dans le travers de la programmation défensive. Voir : <a href="https://fr.wikipedia.org/wiki/D%C3%A9fense_en_profondeur">Défense en profondeur - wikipédia</a>)</p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>valeurs par défaut sécurisées</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ce peut être des valeurs initiales d&#8217;un formulaire construit dynamiquement ou  des valeurs
+par défaut de connexions à une base de données  (par exemple (<a href="https://www.zdnet.fr/actualites/mongodb-mal-configure-cela-pourrait-vous-couter-cher-39822708.htm">600TB de données MongoDB  exposées sur la toile</a>), etc.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://www.zdnet.fr/actualites/linus-torvalds-parle-en-toute-franchise-des-bugs-de-securite-d-intel-39873065.htm" class="bare">https://www.zdnet.fr/actualites/linus-torvalds-parle-en-toute-franchise-des-bugs-de-securite-d-intel-39873065.htm</a>
+</div>
+<div class="footnote" id="_footnote_2">
+<a href="#_footnoteref_2">2</a>. Design Patterns est un livre de méthodologie appliquée à la conception logicielle écrit par Erich Gamma, Richard Helm, Ralph Johnson et John Vlissides et publié en 1994 chez Addison-Wesley. Cet ouvrage aborde le sujet de la programmation orientée objet et introduit le concept des patrons de conception. <a href="https://fr.wikipedia.org/wiki/Design_Patterns">Wikipédia</a>
+</div>
+<div class="footnote" id="_footnote_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://fr.wikipedia.org/wiki/Surface_d%27attaque#R%C3%A9duction_de_la_surface_d&#8217;attaque">Surface d&#8217;attaque - wikipédia</a>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 1.0<br>
+Last updated 2020-04-18 14:14:30 CEST
+</div>
+</div>
+</body>
+</html>

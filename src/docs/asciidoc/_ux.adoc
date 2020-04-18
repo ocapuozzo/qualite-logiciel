@@ -1,0 +1,22 @@
+= UX (expérience utilisateur)
+ifndef::backend-pdf[]
+:imagesdir: images
+endif::[]
+
+
+====
+L'**expérience utilisateur** (en anglais, user experience, abrégé **UX**)
+est la qualité du vécu de l'utilisateur dans des environnements numériques ou physiques.
+====
+
+La *facilité d'utilisation* est l'aisance avec laquelle des personnes, de formations et
+de compétences différentes, peuvent apprendre à utiliser les produits
+logiciels et à s'en servir pour résoudre des problèmes.
+
+Sont concernés également la facilité d'installation, d'opération et de contrôles.
+
+IMPORTANT: Principe de conception d'interface utilisateur : _**Ne prétendez pas connaître l'utilisateur ; vous ne le connaissez pas**_.
+ 
+
+Conseil : Chercher la simplicité
+

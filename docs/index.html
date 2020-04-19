@@ -38,7 +38,11 @@
 <li><a href="#couverture">Couverture</a></li>
 <li><a href="#ponctualité">Ponctualité</a></li>
 <li><a href="#documentation">Documentation</a></li>
-<li><a href="#securitaire">Securitaire</a></li>
+<li><a href="#securitaire">Securitaire</a>
+<ul class="sectlevel2">
+<li><a href="#references">References</a></li>
+</ul>
+</li>
 <li><a href="#facteurs-contradictoires">Facteurs contradictoires</a>
 <ul class="sectlevel2">
 <li><a href="#difficiles-compatibilités-et-compromis">Difficiles compatibilités et Compromis</a></li>
@@ -55,7 +59,7 @@
 <li><a href="#une-fois-et-une-seule">Une fois et une seule</a></li>
 <li><a href="#convention-de-nommage">Convention de nommage</a></li>
 <li><a href="#le-code-est-toujours-testé">Le code est toujours testé</a></li>
-<li><a href="#references">References</a></li>
+<li><a href="#references-2">References</a></li>
 </ul>
 </li>
 </ul>
@@ -69,11 +73,11 @@
 <p>En mars 2020, Google publie <a href="https://static.googleusercontent.com/media/landing.google.com/en//sre/static/pdf/SRS.pdf">Building Secure and Reliable Systems</a>.</p>
 </div>
 <div class="paragraph">
-<p>En préface, le livre démarre par cette question : "<em>un système peut-il être considéré comme vraiment fiable [reliable] s&#8217;il n&#8217;est pas fondamentalement sûr [secure] ? Ou peut-il être considéré comme sûr s&#8217;il n&#8217;est pas fiable ?</em>"</p>
+<p>En préface, le livre démarre par cette question : "<em>un système peut-il être considéré comme vraiment fiable [reliable] s&#8217;il n&#8217;est pas fondamentalement sûr [secure] ? Ou peut-il être considéré comme sûr s&#8217;il n&#8217;est pas fiable ?</em>".</p>
 </div>
 <div class="paragraph">
-<p>Sont présentés ici, dans les grandes lignes, des critèques relatifs à la qualité du logiciel.
-Nous invitons le lecteur à approfondir ce thème par l&#8217;ouvrage de référence,
+<p>Cette question nous ramène à la notion de qualité dans le logiciel et ce document présente ici, dans les grandes lignes,
+les principaux critèques de qualité et nous invitons le lecteur à approfondir ce thème par l&#8217;ouvrage de référence,
 sur lequel cette étude est principalement basée, <a href="https://www.eyrolles.com/Informatique/Livre/conception-et-programmation-orientees-objet-9782212675009/">Conception et Programmation orientées objet (Bertrand Meyer)</a>.</p>
 </div>
 </div>
@@ -569,7 +573,8 @@ privilèges strictement nécessaires à l’exécution du code menant à bien se
 </ul>
 </div>
 <div class="paragraph">
-<p>L&#8217;objectif étant de <em>restreindre les conséquences possibles de comportements inattendus d’un composant, qu’il s’agisse d’un bogue ou de son détournement par un attaquant</em> (<a href="https://www.ssi.gouv.fr/uploads/2017/12/guide_cloisonnement_systeme_anssi_pg_040_v1.pdf">guide ANSSI sur le cloissement système - 2017</a>)</p>
+<p>L&#8217;objectif étant de <em>restreindre les conséquences possibles de comportements inattendus d’un composant,
+qu’il s’agisse d’un bogue ou de son détournement par un attaquant</em>.  <a href="#gansii">[gansii]</a></p>
 </div>
 </div>
 </div>
@@ -632,6 +637,19 @@ par défaut de connexions à une base de données, etc.</p>
 <div class="paragraph">
 <p>Exemple : <a href="https://www.zdnet.fr/actualites/mongodb-mal-configure-cela-pourrait-vous-couter-cher-39822708.htm">600TB de données MongoDB  exposées sur la toile</a></p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="references"><a class="anchor" href="#references"></a>References</h3>
+<div class="ulist bibliography">
+<ul class="bibliography">
+<li>
+<p><a id="gansii"></a>[gansii] <a href="https://www.ssi.gouv.fr/uploads/2017/12/guide_cloisonnement_systeme_anssi_pg_040_v1.pdf">guide ANSSI sur le cloissement système - 2017</a></p>
+</li>
+<li>
+<p><a href="https://social.technet.microsoft.com/wiki/contents/articles/7100.the-security-development-lifecycle.aspx">the security development lifecycle - Microsoft</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -703,7 +721,7 @@ Ils définissent ensemble le caractère <strong>fiable</strong> du logiciel.</p>
 <h2 id="autres-qualités-extreme-programming"><a class="anchor" href="#autres-qualités-extreme-programming"></a>Autres qualités (eXtreme Programming)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Les facteurs de qualité présents dans ce document ne pourrait se passer de recommandations de l&#8217;eXtreme Programming.</p>
+<p>Les facteurs de qualité présents dans ce document ne pourrait se passer de quelques recommandations de l&#8217;eXtreme Programming.</p>
 </div>
 <div class="sect2">
 <h3 id="une-fois-et-une-seule"><a class="anchor" href="#une-fois-et-une-seule"></a>Une fois et une seule</h3>
@@ -741,20 +759,26 @@ Ces deux caractéristiques constituent la règle : <strong>Une Fois et Une Seule
 </div>
 <div class="sect2">
 <h3 id="le-code-est-toujours-testé"><a class="anchor" href="#le-code-est-toujours-testé"></a>Le code est toujours testé</h3>
-<div class="paragraph">
-<p>Présence obligatoire de tests unitaires associés au code.
-Lorsqu&#8217;un bogue survient, un test unitaire est créé.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Présence obligatoire de tests unitaires associés au code.</p>
+</li>
+<li>
+<p>Lorsqu&#8217;un bogue survient, un test unitaire est créé.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="references"><a class="anchor" href="#references"></a>References</h3>
+<h3 id="references-2"><a class="anchor" href="#references-2"></a>References</h3>
 <div class="ulist bibliography">
 <ul class="bibliography">
 <li>
-<p><a id="xp"></a>eXtreme Programming, Kent Beck, CampusPress</p>
+<p><a id="xp"></a>[xp] eXtreme Programming, Kent Beck, CampusPress</p>
 </li>
 <li>
-<p><a id="xp2"></a> L’eXtreme Programming, J.L. Bénard, L. Bossavit, R. Médina, D. Williams, Editions Eyrolles</p>
+<p><a id="xp2"></a>[xp2] L’eXtreme Programming, J.L. Bénard, L. Bossavit, R. Médina, D. Williams, Editions Eyrolles</p>
 </li>
 <li>
 <p><a href="https://fr.wikipedia.org/wiki/Extreme_programming">eXtreme Programming - wikipedia</a></p>
@@ -780,7 +804,7 @@ Lorsqu&#8217;un bogue survient, un test unitaire est créé.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2020-04-19 11:14:06 CEST
+Last updated 2020-04-19 15:59:58 CEST
 </div>
 </div>
 </body>

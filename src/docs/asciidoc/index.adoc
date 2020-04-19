@@ -28,10 +28,10 @@ endif::[]
 
 En mars 2020, Google publie https://static.googleusercontent.com/media/landing.google.com/en//sre/static/pdf/SRS.pdf[Building Secure and Reliable Systems].
 
-En préface, le livre démarre par cette question : "_un système peut-il être considéré comme vraiment fiable [reliable] s'il n'est pas fondamentalement sûr [secure] ? Ou peut-il être considéré comme sûr s'il n'est pas fiable ?_"
+En préface, le livre démarre par cette question : "_un système peut-il être considéré comme vraiment fiable [reliable] s'il n'est pas fondamentalement sûr [secure] ? Ou peut-il être considéré comme sûr s'il n'est pas fiable ?_".
 
-Sont présentés ici, dans les grandes lignes, des critèques relatifs à la qualité du logiciel.
-Nous invitons le lecteur à approfondir ce thème par l'ouvrage de référence,
+Cette question nous ramène à la notion de qualité dans le logiciel et ce document présente ici, dans les grandes lignes,
+les principaux critèques de qualité et nous invitons le lecteur à approfondir ce thème par l'ouvrage de référence,
 sur lequel cette étude est principalement basée, https://www.eyrolles.com/Informatique/Livre/conception-et-programmation-orientees-objet-9782212675009/[Conception et Programmation orientées objet (Bertrand Meyer)].
 
 // <<<

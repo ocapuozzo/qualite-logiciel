@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.exemple</groupId>
-    <artifactId>qualite_logiciel</artifactId>
+    <artifactId>exercices_qualite_code</artifactId>
     <version>1.0</version>
-    <name>qualite-logiciel</name>
-    <description>Notion de qualité logiciel</description>
+    <name>exercices_qualite_code</name>
+    <description>Exercices sur la qualite du code</description>
 
     <properties>
         <project.slides.directory>${project.build.directory}/generated-slides</project.slides.directory>
@@ -44,10 +44,31 @@
         </dependency>
     </dependencies>
 
-
     <build>
         <defaultGoal>process-resources</defaultGoal>
         <plugins>
+
+            <!-- rename index.pdf to project_name.pdf -->
+            <plugin>
+                <groupId>com.coderplus.maven.plugins</groupId>
+                <artifactId>copy-rename-maven-plugin</artifactId>
+                <version>1.0.1</version>
+                <executions>
+                    <execution>
+                        <id>rename-file</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>rename</goal>
+                        </goals>
+                        <configuration>
+                            <!--https://stackoverflow.com/questions/9849868/getting-name-of-last-folder-from-maven-project-basedir -->
+                            <sourceFile>${project.build.directory}/pdf/index.pdf</sourceFile>
+                            <destinationFile>${project.build.directory}/pdf/${project.file.parentFile.name}.pdf</destinationFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <plugin>
                 <!-- added the resources plugin to copy images before adoc transform starts. -->
                 <groupId>org.apache.maven.plugins</groupId>
@@ -114,29 +135,15 @@
                                         <exclude>.asciidoctor/**</exclude>
                                     </excludes>
                                 </resource>
+                                <resource>
+                                    <directory>${project.build.directory}/pdf</directory>
+                                    <filtering>false</filtering>
+                                    <excludes>
+                                        <exclude>.images/**</exclude>
+                                        <exclude>index.pdf</exclude>
+                                    </excludes>
+                                </resource>
                             </resources>
-                        </configuration>
-                    </execution>
-
-                </executions>
-            </plugin>
-
-            <!-- rename index.pdf to project_name.pdf -->
-            <plugin>
-                <groupId>com.coderplus.maven.plugins</groupId>
-                <artifactId>copy-rename-maven-plugin</artifactId>
-                <version>1.0.1</version>
-                <executions>
-                    <execution>
-                        <id>rename-file</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>rename</goal>
-                        </goals>
-                        <configuration>
-                            <!--https://stackoverflow.com/questions/9849868/getting-name-of-last-folder-from-maven-project-basedir -->
-                            <sourceFile>${project.build.directory}/pdf/index.pdf</sourceFile>
-                            <destinationFile>${project.build.directory}/pdf/${project.file.parentFile.name}.pdf</destinationFile>
                         </configuration>
                     </execution>
                 </executions>

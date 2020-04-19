@@ -3,7 +3,7 @@ ifndef::backend-pdf[]
 :imagesdir: images
 endif::[]
 
-Les facteurs de qualité présents dans ce document ne pourrait se passer de recommandations de l'eXtreme Programming.
+Les facteurs de qualité présents dans ce document ne pourrait se passer de quelques recommandations de l'eXtreme Programming.
 
 == Une fois et une seule
 
@@ -15,18 +15,19 @@ Kent Beck  (eXtreme Programming <<xp>>) identifie les 2 principes suivants :
 
 NOTE: Ces deux caractéristiques constituent la règle : *Une Fois et Une Seule*.
 
-
 == Convention de nommage
 Puisque tous les développeurs interviennent sur tout le code, il est indispensable d'établir et de respecter des normes de nommage pour les variables, méthodes, objets, classes, fichiers, etc.
 
 == Le code est toujours testé
-Présence obligatoire de tests unitaires associés au code.
-Lorsqu'un bogue survient, un test unitaire est créé.
+
+- Présence obligatoire de tests unitaires associés au code.
+- Lorsqu'un bogue survient, un test unitaire est créé.
 
 [bibliography]
 == References
-- [[xp]]eXtreme Programming, Kent Beck, CampusPress
-- [[xp2, 2]] L’eXtreme Programming, J.L. Bénard, L. Bossavit, R. Médina, D. Williams, Editions Eyrolles
+
+- [[[xp]]] eXtreme Programming, Kent Beck, CampusPress
+- [[[xp2]]] L’eXtreme Programming, J.L. Bénard, L. Bossavit, R. Médina, D. Williams, Editions Eyrolles
 - https://fr.wikipedia.org/wiki/Extreme_programming[eXtreme Programming - wikipedia]
 
 

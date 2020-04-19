@@ -50,6 +50,14 @@
 <li><a href="#modularité">Modularité</a></li>
 </ul>
 </li>
+<li><a href="#autres-qualités-extreme-programming">Autres qualités (eXtreme Programming)</a>
+<ul class="sectlevel2">
+<li><a href="#une-fois-et-une-seule">Une fois et une seule</a></li>
+<li><a href="#convention-de-nommage">Convention de nommage</a></li>
+<li><a href="#le-code-est-toujours-testé">Le code est toujours testé</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -78,11 +86,18 @@ sur lequel cette étude est principalement basée, <a href="https://www.eyrolles
 par exemple la satisfaction des utilisateurs pour sa facilité d&#8217;utilisation, rapidité, robustesse etc.</p>
 </div>
 <div class="paragraph">
-<p>Selon la catégorie de l&#8217;utilisateur, les critères d&#8217;appréciation peuvent variés. Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d&#8217;atelier sera plus attentif à l&#8217;ergonomie du logiciel qu&#8217;à son coût, etc.</p>
+<p>Selon la catégorie de l&#8217;utilisateur, les critères d&#8217;appréciation peuvent variés.
+Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de
+la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d&#8217;atelier sera
+plus attentif à l&#8217;ergonomie du logiciel qu&#8217;à son coût, un DPO (pour <em>Data Protection Officer</em>) particulièrelent vigilent
+à la protection des données personnelles,  etc.</p>
 </div>
 <div class="paragraph">
-<p>La satisfaction est fonction des intérêts de chacun, même si certains, comme la sécurité peuvent être transverses.
-La qualité est une affaire de point de vue. Un informaticien chargé de maintenir le code d&#8217;une application, sera sensible à son architecture, à la lisibilité du code source.</p>
+<p>La satisfaction est fonction des intérêts de chacun, même si certains,
+comme la sécurité peuvent être transverses.</p>
+</div>
+<div class="paragraph">
+<p>La qualité est une affaire de point de vue. Un informaticien chargé de maintenir le code d&#8217;une application, sera sensible à son architecture, à la lisibilité du code source.</p>
 </div>
 <div class="paragraph">
 <p>Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées <strong>externes</strong> et <strong>internes</strong>.</p>
@@ -163,41 +178,17 @@ une autre <em>technique</em>, concernant la correction de la traduction automati
 </li>
 </ul>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-La correction est une qualité plus difficile à atteindre qu&#8217;il n&#8217;y parait. Les tests automatisés, prenant appuie sur les spécifications, participent efficacement à la mesure de la correction.
+La correction est une qualité plus difficile à atteindre qu&#8217;il n&#8217;y parait. Les tests automatisés, prenant appui sur les spécifications, participent efficacement à la mesure de la correction.
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Un bon logiciel est un logiciel qui procure satisfaction, par exemple la satisfaction
-des utilisateurs pour sa facilité d&#8217;utilisation, rapidité, robustesse etc.</p>
-</div>
-<div class="paragraph">
-<p>Selon la catégorie de l&#8217;utilisateur, les critères d&#8217;appréciation peuvent variés. Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d&#8217;atelier sera plus attentif à l&#8217;ergonomie du logiciel qu&#8217;à son coût, etc.</p>
-</div>
-<div class="paragraph">
-<p>La satisfaction est fonction des intérêts de chacun, même si certains, comme la sécurité peuvent être transverses.
-La qualité est une affaire de point de vue. Un informaticien chargé de maintenir le code d&#8217;une application, sera sensible à son architecture, à la lisibilité du code source.</p>
-</div>
-<div class="paragraph">
-<p>Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées <strong>externes</strong> et <strong>internes</strong>.</p>
-</div>
-<div class="paragraph">
-<p>Les facteurs externes sont ceux perçus par les utilisateurs au sens large, c&#8217;est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
-Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d&#8217;être, cependant, le seul moyen d&#8217;atteindre des niveaux de qualités visibles satisfaisants pour l&#8217;utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : facteurs internes.</p>
-</div>
-<div class="paragraph">
-<p>Voici quelques unes des qualités attendues : correction, facilité d&#8217;utilisation, rapidité d&#8217;exécution, extensibilité, couverture fonctionnelle, ponctualité, robustesse, réutilisabilité, compatibilité, portabilité, documentation.</p>
-</div>
-<div class="paragraph">
-<p><strong>La qualité du logiciel dépend de facteurs externes et facteurs internes.</strong></p>
 </div>
 </div>
 </div>
@@ -330,19 +321,26 @@ ou méta-catalogués (méta-pattern).
 <div class="sectionbody">
 <div class="exampleblock">
 <div class="content">
-<div class="literalblock">
-<div class="content">
-<pre> La **compatibilité** est la faculté avec laquelle des éléments logiciels peuvent
-être combinés à d'autres.</pre>
-</div>
+<div class="paragraph">
+<p>La <strong>compatibilité</strong> est la faculté avec laquelle des éléments logiciels peuvent
+être combinés à d&#8217;autres.</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Exemple : Les formats de fichier d&#8217;un logiciel, incompatible avec d&#8217;autres (format dit propriétaire).</p>
+<p>Exemple : Les formats de fichier d&#8217;un logiciel ouverts ou propriétaires.</p>
 </div>
-<div class="paragraph">
-<p>Solution : Adopter des standards. Par exemple XML/JSON comme strutures d&#8217;échanges, architecture REST, etc.  </p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Adopter des standards. Par exemple XML/JSON comme strutures d&#8217;échanges, Web Service, architecture REST, etc.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -457,14 +455,15 @@ Principe de conception d&#8217;interface utilisateur : <em><strong>Ne prétendez
 </li>
 </ul>
 </div>
-<div class="admonitionblock tip">
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Conseil : Introduire de nouvelles fonctions que si les fonctionnalités actuelles offrent entière satisfaction.
+Introduire de nouvelles fonctions que si les fonctionnalités actuelles offrent entière satisfaction,
+tout en étant ouvert à la négociation en cas de redéfinition des besoins (agilité)
 </td>
 </tr>
 </table>
@@ -529,11 +528,11 @@ du sens, de la conaissance aux autres, à compter par le code source lui-même.<
 </div>
 <div class="quoteblock">
 <blockquote>
-Ce que l&#8217;on conçoit bien s&#8217;énonce clairement, et les mots pour le dire arrivent aisément.
+Pour en finir avec l'<strong>amnésie métier du code source</strong>, le développeur, dans son code, utilise des termes que l’expert métier connait et utilise !
 </blockquote>
 <div class="attribution">
-&#8212; Nicolas Boileau<br>
-<cite>1636 - 1711</cite>
+&#8212; DDD Eric Evans<br>
+<cite>ubituitous language</cite>
 </div>
 </div>
 </td>
@@ -584,10 +583,7 @@ privilèges strictement nécessaires à l’exécution du code menant à bien se
 </ul>
 </div>
 <div class="paragraph">
-<p>Une approche pour améliorer la sécurité de l&#8217;information est de réduire la surface d&#8217;attaque d&#8217;un système ou d&#8217;un logiciel.</p>
-</div>
-<div class="paragraph">
-<p>Les stratégies de base de réduction d&#8217;une surface d&#8217;attaque sont les suivants :</p>
+<p>Une approche pour améliorer la sécurité de l&#8217;information est de réduire la surface d&#8217;attaque d&#8217;un système ou d&#8217;un logiciel. Les stratégies de base de réduction d&#8217;une surface d&#8217;attaque sont les suivants :</p>
 </div>
 <div class="ulist">
 <ul>
@@ -631,7 +627,10 @@ de ne pas tomber dans le travers de la programmation défensive. Voir : <a href=
 </div>
 <div class="paragraph">
 <p>Ce peut être des valeurs initiales d&#8217;un formulaire construit dynamiquement ou  des valeurs
-par défaut de connexions à une base de données  (par exemple (<a href="https://www.zdnet.fr/actualites/mongodb-mal-configure-cela-pourrait-vous-couter-cher-39822708.htm">600TB de données MongoDB  exposées sur la toile</a>), etc.</p>
+par défaut de connexions à une base de données, etc.</p>
+</div>
+<div class="paragraph">
+<p>Exemple : <a href="https://www.zdnet.fr/actualites/mongodb-mal-configure-cela-pourrait-vous-couter-cher-39822708.htm">600TB de données MongoDB  exposées sur la toile</a></p>
 </div>
 </div>
 </div>
@@ -641,8 +640,8 @@ par défaut de connexions à une base de données  (par exemple (<a href="https:
 <h2 id="facteurs-contradictoires"><a class="anchor" href="#facteurs-contradictoires"></a>Facteurs contradictoires</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Durant la vie d&#8217;un projet, il est souvent question de compromis, et
-facteurs de qualité en font partie.</p>
+<p>Durant la vie d&#8217;un projet, il est souvent question de compromis, et les
+facteurs de qualité n&#8217;échappent ps à cette règle.</p>
 </div>
 <div class="sect2">
 <h3 id="difficiles-compatibilités-et-compromis"><a class="anchor" href="#difficiles-compatibilités-et-compromis"></a>Difficiles compatibilités et Compromis</h3>
@@ -676,7 +675,8 @@ mais il y a une qualité pour laquelle le compromis n&#8217;est pas négociable 
 <h2 id="qualités-essentielles"><a class="anchor" href="#qualités-essentielles"></a>Qualités essentielles</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Les qualités généralement attendues d&#8217;un logiciel est sa <em>fiabilité</em> et sa <em>souplesse d&#8217;adaptation</em>.</p>
+<p>Les qualités généralement attendues d&#8217;un logiciel est sa <em>fiabilité</em> et
+sa <em>modularité</em>.</p>
 </div>
 <div class="sect2">
 <h3 id="fiabilité"><a class="anchor" href="#fiabilité"></a>Fiabilité</h3>
@@ -691,10 +691,75 @@ Ils définissent ensemble le caractère <strong>fiable</strong> du logiciel.</p>
 <p>L'<strong>Extensibilité</strong> et la <strong>Réutilisabilité</strong> caractérisent la facilité de modification et d&#8217;évolution.</p>
 </div>
 <div class="paragraph">
-<p>Un composant logiciel généralisé pourra être utilisé dans d&#8217;autres applications.</p>
+<p>Un composant logiciel généralisé pourra être utilisé dans d&#8217;autres applications, directement ou par adaptation.</p>
 </div>
 <div class="paragraph">
 <p>Ces deux qualités sont souvent représentées par le mot : <strong>Modularité</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="autres-qualités-extreme-programming"><a class="anchor" href="#autres-qualités-extreme-programming"></a>Autres qualités (eXtreme Programming)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les facteurs de qualité présents dans ce document ne pourrait se passer de recommandations de l&#8217;eXtreme Programming.</p>
+</div>
+<div class="sect2">
+<h3 id="une-fois-et-une-seule"><a class="anchor" href="#une-fois-et-une-seule"></a>Une fois et une seule</h3>
+<div class="paragraph">
+<p>Kent Beck  (eXtreme Programming <a href="#xp">[xp]</a>) identifie les 2 principes suivants :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Le système (code et tests pris dans leur ensemble) doit <strong>communiquer</strong> tout ce que vous avez l&#8217;intention de communiquer (comprendre le code <strong>est</strong> la documentation, à rapprocher de <a href="index.html#documentation">#Documentation</a>)</p>
+</li>
+<li>
+<p>Le système ne doit contenir <strong>aucune duplication de code</strong></p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Ces deux caractéristiques constituent la règle : <strong>Une Fois et Une Seule</strong>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="convention-de-nommage"><a class="anchor" href="#convention-de-nommage"></a>Convention de nommage</h3>
+<div class="paragraph">
+<p>Puisque tous les développeurs interviennent sur tout le code, il est indispensable d&#8217;établir et de respecter des normes de nommage pour les variables, méthodes, objets, classes, fichiers, etc.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="le-code-est-toujours-testé"><a class="anchor" href="#le-code-est-toujours-testé"></a>Le code est toujours testé</h3>
+<div class="paragraph">
+<p>Présence obligatoire de tests unitaires associés au code.
+Lorsqu&#8217;un bogue survient, un test unitaire est créé.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="references"><a class="anchor" href="#references"></a>References</h3>
+<div class="ulist bibliography">
+<ul class="bibliography">
+<li>
+<p><a id="xp"></a>eXtreme Programming, Kent Beck, CampusPress</p>
+</li>
+<li>
+<p><a id="xp2"></a> L’eXtreme Programming, J.L. Bénard, L. Bossavit, R. Médina, D. Williams, Editions Eyrolles</p>
+</li>
+<li>
+<p><a href="https://fr.wikipedia.org/wiki/Extreme_programming">eXtreme Programming - wikipedia</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -715,7 +780,7 @@ Ils définissent ensemble le caractère <strong>fiable</strong> du logiciel.</p>
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2020-04-18 17:04:35 CEST
+Last updated 2020-04-19 11:14:06 CEST
 </div>
 </div>
 </body>

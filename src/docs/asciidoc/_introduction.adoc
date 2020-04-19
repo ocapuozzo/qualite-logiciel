@@ -6,9 +6,15 @@ endif::[]
 Un bon logiciel est un logiciel qui procure satisfaction,
 par exemple la satisfaction des utilisateurs pour sa facilité d'utilisation, rapidité, robustesse etc.
 
-Selon la catégorie de l'utilisateur, les critères d'appréciation peuvent variés. Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d'atelier sera plus attentif à l'ergonomie du logiciel qu'à son coût, etc.
+Selon la catégorie de l'utilisateur, les critères d'appréciation peuvent variés.
+Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de
+la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d'atelier sera
+plus attentif à l'ergonomie du logiciel qu'à son coût, un DPO (pour _Data Protection Officer_) particulièrelent vigilent
+à la protection des données personnelles,  etc.
 
-La satisfaction est fonction des intérêts de chacun, même si certains, comme la sécurité peuvent être transverses.
+La satisfaction est fonction des intérêts de chacun, même si certains,
+comme la sécurité peuvent être transverses.
+
 La qualité est une affaire de point de vue. Un informaticien chargé de maintenir le code d'une application, sera sensible à son architecture, à la lisibilité du code source.
 
 Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées **externes** et **internes**.

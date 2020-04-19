@@ -3,7 +3,8 @@ ifndef::backend-pdf[]
 :imagesdir: images
 endif::[]
 
-Les qualités généralement attendues d'un logiciel est sa _fiabilité_ et sa _souplesse d'adaptation_.
+Les qualités généralement attendues d'un logiciel est sa _fiabilité_ et
+sa _modularité_.
 
 
 == Fiabilité
@@ -15,7 +16,6 @@ Ils définissent ensemble le caractère *fiable* du logiciel.
 
 L'*Extensibilité* et la *Réutilisabilité* caractérisent la facilité de modification et d'évolution.
 
-Un composant logiciel généralisé pourra être utilisé dans d'autres applications.
+Un composant logiciel généralisé pourra être utilisé dans d'autres applications, directement ou par adaptation.
 
 Ces deux qualités sont souvent représentées par le mot : *Modularité*
-

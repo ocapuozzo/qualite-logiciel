@@ -3,8 +3,8 @@ ifndef::backend-pdf[]
 :imagesdir: images
 endif::[]
 
-Durant la vie d'un projet, il est souvent question de compromis, et
-facteurs de qualité en font partie.
+Durant la vie d'un projet, il est souvent question de compromis, et les
+facteurs de qualité n'échappent ps à cette règle.
 
 == Difficiles compatibilités et Compromis
 

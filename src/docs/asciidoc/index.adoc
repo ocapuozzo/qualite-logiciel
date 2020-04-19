@@ -50,3 +50,5 @@ include::_documentation.adoc[leveloffset=+1]
 include::_securitaire.adoc[leveloffset=+1]
 include::_facteurs-contradictoires.adoc[leveloffset=+1]
 include::_qualites-essentielles.adoc[leveloffset=+1]
+include::_qualites-XP.adoc[leveloffset=+1]
+

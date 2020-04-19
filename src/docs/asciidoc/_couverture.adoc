@@ -18,7 +18,9 @@ Quelques Conséquences liées à la course aux options :
 • Risque de dépassement de budget
 
 
-TIP: Conseil : Introduire de nouvelles fonctions que si les fonctionnalités actuelles offrent entière satisfaction.
+NOTE: Introduire de nouvelles fonctions que si les fonctionnalités actuelles offrent entière satisfaction,
+tout en étant ouvert à la négociation en cas de redéfinition des besoins (agilité)
+
 
 On pourra s'interesser à la méthode https://fr.wikipedia.org/wiki/M%C3%A9thode_MoSCoW[*MoSCoW*] dans le but
 d'affecter des *niveaux de priorités* aux exigences.

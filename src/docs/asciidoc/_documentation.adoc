@@ -19,9 +19,10 @@ On distingue :
 --
 Ne documentez pas inutilement votre code, mais faites lui communiquer ce qu'il fait par ses propres mots.
 
-[quote, Nicolas Boileau,  1636 - 1711]
-Ce que l'on conçoit bien s'énonce clairement, et les mots pour le dire arrivent aisément.
+[quote, DDD Eric Evans, ubituitous language ]
+Pour en finir avec l'*amnésie métier du code source*, le développeur, dans son code, utilise des termes que l’expert métier connait et utilise !
 
 --
+
 
 

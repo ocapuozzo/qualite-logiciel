@@ -36,19 +36,35 @@ sur lequel cette étude est principalement basée, https://www.eyrolles.com/Info
 
 // <<<
 include::_introduction.adoc[leveloffset=+1]
+<<<
 include::_correction.adoc[leveloffset=+1]
+<<<
 include::_robustesse.adoc[leveloffset=+1]
+<<<
 include::_extensibilite.adoc[leveloffset=+1]
+<<<
 include::_reutilisabilite.adoc[leveloffset=+1]
+<<<
 include::_compatibilite.adoc[leveloffset=+1]
+<<<
 include::_efficacite.adoc[leveloffset=+1]
+<<<
 include::_portabilite.adoc[leveloffset=+1]
+<<<
 include::_ux.adoc[leveloffset=+1]
+<<<
 include::_couverture.adoc[leveloffset=+1]
+<<<
 include::_ponctualite.adoc[leveloffset=+1]
+<<<
 include::_documentation.adoc[leveloffset=+1]
+<<<
 include::_securitaire.adoc[leveloffset=+1]
+<<<
 include::_facteurs-contradictoires.adoc[leveloffset=+1]
+<<<
 include::_qualites-essentielles.adoc[leveloffset=+1]
+<<<
 include::_qualites-XP.adoc[leveloffset=+1]
+<<<
 

@@ -1,17 +1,16 @@
-= Securitaire
+= Robustesse-Cyber-Securité
 ifndef::backend-pdf[]
 :imagesdir: images
 endif::[]
 
-Ce facteur de qualité est à rappocher de celui de link:index.html#robustesse[robustesse],
-sous l'angle de la cyber sécurité.
+Ce facteur de qualité est une application de la link:index.html#robustesse[robustesse],
+dans le cadre de la cyber sécurité.
 
 ====
-La qualité **sécuritaire** (_security_) relève de la prise en compte de principes et de bonnes pratiques relatifs à la cyber sécurité.
+La qualité **robustesse - cyber sécurité** relève de la prise en compte de principes et de bonnes pratiques relatifs à la cyber sécurité.
 ====
 
-Exemples liés au développement logiciel en terme de cyber sécurité
-
+Exemples de bonnes pratiques
 
 ====
 • *principe de moindre privilège*. Stipule qu’une tâche ne doit bénéficier que des

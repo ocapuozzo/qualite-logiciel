@@ -3,14 +3,10 @@ ifndef::backend-pdf[]
 :imagesdir: images
 endif::[]
 
-Un bon logiciel est un logiciel qui procure satisfaction,
-par exemple la satisfaction des utilisateurs pour sa facilité d'utilisation, rapidité, robustesse etc.
+Un bon logiciel métier est un logiciel qui a atteint ses objectifs, à savoir la satisfaction de ses utilisateurs quant à la qualité des services rendus et pour sa facilité d'utilisation, rapidité, robustesse etc.
 
 Selon la catégorie de l'utilisateur, les critères d'appréciation peuvent varier.
-Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de
-la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d'atelier sera
-plus attentif à l'ergonomie du logiciel qu'à son coût, un DPO (pour _Data Protection Officer_) particulièrelent vigilent
-à la protection des données personnelles,  etc.
+Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d'atelier sera plus attentif à l'ergonomie du logiciel qu'à son coût, un DPO (pour _Data Protection Officer_) sera particulièrement vigilent à la protection des données personnelles,  etc.
 
 La satisfaction est fonction des intérêts de chacun, même si certains,
 comme la sécurité peuvent être transverses.
@@ -19,9 +15,9 @@ La qualité est une affaire de point de vue. Un informaticien chargé de mainten
 
 Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées **externes** et **internes**.
 
-Les facteurs externes sont ceux perçus par les utilisateurs au sens large, c'est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
-Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d'être, cependant, le seul moyen d'atteindre des niveaux de qualités visibles satisfaisants pour l'utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : facteurs internes.
+Les *facteurs externes* sont ceux perçus par les utilisateurs au sens large, c'est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
+Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d'être, cependant, le seul moyen d'atteindre des niveaux de qualités visibles satisfaisants pour l'utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : *facteurs internes*.
 
 Voici quelques unes des qualités attendues : correction, facilité d'utilisation, rapidité d'exécution, extensibilité, couverture fonctionnelle, ponctualité, robustesse, réutilisabilité, compatibilité, portabilité, documentation.
 
-**La qualité du logiciel dépend de facteurs externes et facteurs internes.**
+IMPORTANT: **La qualité du logiciel dépend de facteurs à la fois externes et internes.**

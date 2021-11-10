@@ -1,4 +1,4 @@
-= Autres qualités (eXtreme Programming)
+= Autres qualités internes (eXtreme Programming)
 ifndef::backend-pdf[]
 :imagesdir: images
 endif::[]

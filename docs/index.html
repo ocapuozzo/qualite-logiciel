@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
 <meta name="description" content="concepts qualité du lociel">
-<meta name="author" content="O. Capuozzo">
+<meta name="author" content="Ressource libre">
 <title>Notion de qualité du logiciel</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <link rel="stylesheet" href="./asciidoctor.css">
@@ -17,9 +17,9 @@
 <div id="header">
 <h1>Notion de qualité du logiciel</h1>
 <div class="details">
-<span id="author" class="author">O. Capuozzo</span><br>
-<span id="revnumber">version 1.0,</span>
-<span id="revdate">2020-04-17</span>
+<span id="author" class="author">Ressource libre</span><br>
+<span id="revnumber">version 1.1,</span>
+<span id="revdate">2021-11-01</span>
 <br><span id="revremark">Version asciidoc</span>
 </div>
 <div id="toc" class="toc2">
@@ -29,6 +29,11 @@
 <li><a href="#notion-de-qualité-du-logiciel">Notion de qualité du logiciel</a></li>
 <li><a href="#correction">Correction</a></li>
 <li><a href="#robustesse">Robustesse</a></li>
+<li><a href="#robustesse-cybersecurité">Robustesse-Cybersecurité</a>
+<ul class="sectlevel2">
+<li><a href="#references">References</a></li>
+</ul>
+</li>
 <li><a href="#extensibilité">Extensibilité</a></li>
 <li><a href="#réutilisabilité">Réutilisabilité</a></li>
 <li><a href="#compatibilité">Compatibilité</a></li>
@@ -38,11 +43,6 @@
 <li><a href="#couverture">Couverture</a></li>
 <li><a href="#ponctualité">Ponctualité</a></li>
 <li><a href="#documentation">Documentation</a></li>
-<li><a href="#robustesse-cyber-securité">Robustesse-Cyber-Securité</a>
-<ul class="sectlevel2">
-<li><a href="#references">References</a></li>
-</ul>
-</li>
 <li><a href="#facteurs-contradictoires">Facteurs contradictoires</a>
 <ul class="sectlevel2">
 <li><a href="#difficiles-compatibilités-et-compromis">Difficiles compatibilités et Compromis</a></li>
@@ -54,7 +54,7 @@
 <li><a href="#modularité">Modularité</a></li>
 </ul>
 </li>
-<li><a href="#autres-qualités-extreme-programming">Autres qualités (eXtreme Programming)</a>
+<li><a href="#autres-qualités-internes-extreme-programming">Autres qualités internes (eXtreme Programming)</a>
 <ul class="sectlevel2">
 <li><a href="#une-fois-et-une-seule">Une fois et une seule</a></li>
 <li><a href="#convention-de-nommage">Convention de nommage</a></li>
@@ -86,15 +86,11 @@ sur lequel cette étude est principalement basée, <a href="https://www.eyrolles
 <h2 id="notion-de-qualité-du-logiciel"><a class="anchor" href="#notion-de-qualité-du-logiciel"></a>Notion de qualité du logiciel</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Un bon logiciel est un logiciel qui procure satisfaction,
-par exemple la satisfaction des utilisateurs pour sa facilité d&#8217;utilisation, rapidité, robustesse etc.</p>
+<p>Un bon logiciel métier est un logiciel qui a atteint ses objectifs, à savoir la satisfaction de ses utilisateurs quant à la qualité des services rendus et pour sa facilité d&#8217;utilisation, rapidité, robustesse etc.</p>
 </div>
 <div class="paragraph">
 <p>Selon la catégorie de l&#8217;utilisateur, les critères d&#8217;appréciation peuvent varier.
-Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de
-la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d&#8217;atelier sera
-plus attentif à l&#8217;ergonomie du logiciel qu&#8217;à son coût, un DPO (pour <em>Data Protection Officer</em>) particulièrelent vigilent
-à la protection des données personnelles,  etc.</p>
+Par exemple le responsable des achats sera très satisfait si le logiciel de gestion de la chaîne logistique est livré à date prévue, et sans surcoût. Un chef d&#8217;atelier sera plus attentif à l&#8217;ergonomie du logiciel qu&#8217;à son coût, un DPO (pour <em>Data Protection Officer</em>) sera particulièrement vigilent à la protection des données personnelles,  etc.</p>
 </div>
 <div class="paragraph">
 <p>La satisfaction est fonction des intérêts de chacun, même si certains,
@@ -107,14 +103,23 @@ comme la sécurité peuvent être transverses.</p>
 <p>Les points de vue peuvent se classer en deux catégories, ou facteurs, nommées <strong>externes</strong> et <strong>internes</strong>.</p>
 </div>
 <div class="paragraph">
-<p>Les facteurs externes sont ceux perçus par les utilisateurs au sens large, c&#8217;est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
-Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d&#8217;être, cependant, le seul moyen d&#8217;atteindre des niveaux de qualités visibles satisfaisants pour l&#8217;utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : facteurs internes.</p>
+<p>Les <strong>facteurs externes</strong> sont ceux perçus par les utilisateurs au sens large, c&#8217;est à dire ceux qui ne sont pas en contact direct avec le code source du logiciel.
+Les facteurs externes sont les seuls qui comptent en réalité car ils concernent la finalité du produit, sa raison d&#8217;être, cependant, le seul moyen d&#8217;atteindre des niveaux de qualités visibles satisfaisants pour l&#8217;utilisateur (facteurs externes), est de rechercher à atteindre les qualités cachées du logiciel : <strong>facteurs internes</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Voici quelques unes des qualités attendues : correction, facilité d&#8217;utilisation, rapidité d&#8217;exécution, extensibilité, couverture fonctionnelle, ponctualité, robustesse, réutilisabilité, compatibilité, portabilité, documentation.</p>
 </div>
-<div class="paragraph">
-<p><strong>La qualité du logiciel dépend de facteurs externes et facteurs internes.</strong></p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<strong>La qualité du logiciel dépend de facteurs à la fois externes et internes.</strong>
+</td>
+</tr>
+</table>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -238,6 +243,128 @@ la robustesse caractérise ce qui se passe en dehors de cette spécification.
 </div>
 </div>
 <div class="sect1">
+<h2 id="robustesse-cybersecurité"><a class="anchor" href="#robustesse-cybersecurité"></a>Robustesse-Cybersecurité</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ce facteur de qualité est une application de la <a href="index.html#robustesse">robustesse</a>,
+dans le cadre de la cybersécurité.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>La qualité <strong>robustesse - cybersécurité</strong> relève de la prise en compte de principes et de bonnes pratiques visant à résister à des usages malveillants du logiciel (cybersécurité).</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Exemples de bonnes pratiques</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Principe de moindre privilège</strong>. Stipule qu’un cas d&#8217;utilisation  ne doit bénéficier que des privilèges strictement nécessaires à l’exécution de son code.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>L&#8217;objectif étant de <em>restreindre les conséquences possibles de comportements inattendus d’un composant,
+qu’il s’agisse d’un bogue ou de son détournement par un attaquant</em>.  <a href="#gansii">[gansii]</a></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Réduction de la surface d&#8217;attaque</strong>. <em>La surface d&#8217;attaque ou surface d&#8217;exposition est la somme des différents points faibles (les « vecteurs d&#8217;attaque ») par lesquels un utilisateur non autorisé (un « pirate ») pourrait potentiellement s&#8217;introduire dans un environnement logiciel et en soutirer des données</em>.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Une approche pour améliorer la sécurité de l&#8217;information est de <strong>réduire</strong> la surface d&#8217;attaque d&#8217;un système, d&#8217;un logiciel. Les stratégies de base de réduction d&#8217;une surface d&#8217;attaque sont les suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Limitation du nombre de points d&#8217;entrée disponibles (par exemple, interdire tout accès à la base de données de l&#8217;application en dehors de celle-ci ou d&#8217;un compte admin en ssh)</p>
+</li>
+<li>
+<p>Limitation des dépendances tiers</p>
+</li>
+<li>
+<p>Réduction de la quantité de code en cours d&#8217;exécution</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Défense en profondeur</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Terme emprunté à une technique militaire destinée à retarder l&#8217;ennemi. Consiste à exploiter plusieurs techniques
+indépendantes de sécurité, afin de <strong>réduire le risque</strong> lorsqu&#8217;un composant particulier de sécurité est compromis ou défaillant</em>.</p>
+</div>
+<div class="paragraph">
+<p>En pratique, pour certaines actions aux lourdes conséquences (suppression de données sans possibilité de revenir en arrière, ou à impact métier fort) le développeur pourra appliquer une mesure d&#8217;authentification préalable, même si l&#8217;utilisateur est considéré comme ayant les droits à ce moment là (dans le cas d&#8217;un défaut de sécurité côté utilisateur&#8201;&#8212;&#8201;une autre personne se faisant passer pour lui suite à un vol de jeton d&#8217;authentification, ou à l&#8217;emprunt d&#8217;une chaise vide dans les locaux de l&#8217;entreprise&#8230;&#8203;). Voir <a href="https://www.ssi.gouv.fr/agence/publication/le-modele-zero-trust/">ANSSI le modele <em>zero trust</em></a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Attention cependant de ne pas tomber dans le travers de la programmation défensive. Voir : <a href="https://fr.wikipedia.org/wiki/D%C3%A9fense_en_profondeur">Défense en profondeur - wikipédia</a>)
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Valeurs par défaut sécurisées</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ce peut être des valeurs initiales d&#8217;un formulaire construit dynamiquement ou  des valeurs par défaut de connexions à une base de données placées dans un fichier de configuration, etc.</p>
+</div>
+<div class="paragraph">
+<p>Exemple : <a href="https://www.zdnet.fr/actualites/mongodb-mal-configure-cela-pourrait-vous-couter-cher-39822708.htm">600TB de données MongoDB  exposées sur la toile</a></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="references"><a class="anchor" href="#references"></a>References</h3>
+<div class="ulist bibliography">
+<ul class="bibliography">
+<li>
+<p><a id="gansii"></a>[gansii] <a href="https://www.ssi.gouv.fr/uploads/2017/12/guide_cloisonnement_systeme_anssi_pg_040_v1.pdf">guide ANSSI sur le cloissement système - 2017</a></p>
+</li>
+<li>
+<p><a href="https://social.technet.microsoft.com/wiki/contents/articles/7100.the-security-development-lifecycle.aspx">the security development lifecycle - Microsoft</a></p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="extensibilité"><a class="anchor" href="#extensibilité"></a>Extensibilité</h2>
 <div class="sectionbody">
 <div class="exampleblock">
@@ -316,7 +443,7 @@ la construction de plusieurs applications différentes.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Certains modèles de conception sont aussi réutilisés, et même catalogués (design patterns.<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup>)
+Certains modèles de conception sont aussi réutilisés, et même catalogués (design patterns.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup>)
 ou méta-catalogués (méta-pattern).
 </td>
 </tr>
@@ -558,116 +685,6 @@ Pour en finir avec l'<strong>amnésie métier du code source</strong>, le dével
 </div>
 </div>
 <div class="sect1">
-<h2 id="robustesse-cyber-securité"><a class="anchor" href="#robustesse-cyber-securité"></a>Robustesse-Cyber-Securité</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Ce facteur de qualité est une application de la <a href="index.html#robustesse">robustesse</a>,
-dans le cadre de la cyber sécurité.</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>La qualité <strong>robustesse - cyber sécurité</strong> relève de la prise en compte de principes et de bonnes pratiques relatifs à la cyber sécurité.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Exemples de bonnes pratiques</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>principe de moindre privilège</strong>. Stipule qu’une tâche ne doit bénéficier que des
-privilèges strictement nécessaires à l’exécution du code menant à bien ses fonctionnalités</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>L&#8217;objectif étant de <em>restreindre les conséquences possibles de comportements inattendus d’un composant,
-qu’il s’agisse d’un bogue ou de son détournement par un attaquant</em>.  <a href="#gansii">[gansii]</a></p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>réduction de la surface d&#8217;attaque</strong>. <em>La surface d&#8217;attaque ou surface d&#8217;exposition est la somme des différents points faibles (les « vecteurs d&#8217;attaque ») par lesquels un utilisateur non autorisé (un « pirate ») pourrait potentiellement s&#8217;introduire dans un environnement logiciel et en soutirer des données</em>.<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</sup></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Une approche pour améliorer la sécurité de l&#8217;information est de réduire la surface d&#8217;attaque d&#8217;un système ou d&#8217;un logiciel. Les stratégies de base de réduction d&#8217;une surface d&#8217;attaque sont les suivants :</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Limitation du nombre de points d&#8217;entrée disponibles pour les utilisateurs non approuvés</p>
-</li>
-<li>
-<p>Renforcement du cloisonnement des services relativement peu demandés.</p>
-</li>
-<li>
-<p>Réduction de la quantité de code en cours d&#8217;exécution</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>défense en profondeur</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>Terme emprunté à une technique militaire destinée à retarder l&#8217;ennemi. Consiste à exploiter plusieurs techniques
-indépendantes de sécurité, afin de <strong>réduire le risque</strong> lorsqu&#8217;un composant particulier de sécurité est compromis ou défaillant</em>. Attention cependant
-de ne pas tomber dans le travers de la programmation défensive. Voir : <a href="https://fr.wikipedia.org/wiki/D%C3%A9fense_en_profondeur">Défense en profondeur - wikipédia</a>)</p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p><strong>valeurs par défaut sécurisées</strong>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Ce peut être des valeurs initiales d&#8217;un formulaire construit dynamiquement ou  des valeurs
-par défaut de connexions à une base de données, etc.</p>
-</div>
-<div class="paragraph">
-<p>Exemple : <a href="https://www.zdnet.fr/actualites/mongodb-mal-configure-cela-pourrait-vous-couter-cher-39822708.htm">600TB de données MongoDB  exposées sur la toile</a></p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="references"><a class="anchor" href="#references"></a>References</h3>
-<div class="ulist bibliography">
-<ul class="bibliography">
-<li>
-<p><a id="gansii"></a>[gansii] <a href="https://www.ssi.gouv.fr/uploads/2017/12/guide_cloisonnement_systeme_anssi_pg_040_v1.pdf">guide ANSSI sur le cloissement système - 2017</a></p>
-</li>
-<li>
-<p><a href="https://social.technet.microsoft.com/wiki/contents/articles/7100.the-security-development-lifecycle.aspx">the security development lifecycle - Microsoft</a></p>
-</li>
-</ul>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="facteurs-contradictoires"><a class="anchor" href="#facteurs-contradictoires"></a>Facteurs contradictoires</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -733,7 +750,7 @@ Ils définissent ensemble le caractère <strong>fiable</strong> du logiciel.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="autres-qualités-extreme-programming"><a class="anchor" href="#autres-qualités-extreme-programming"></a>Autres qualités (eXtreme Programming)</h2>
+<h2 id="autres-qualités-internes-extreme-programming"><a class="anchor" href="#autres-qualités-internes-extreme-programming"></a>Autres qualités internes (eXtreme Programming)</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Les facteurs de qualité présents dans ce document ne pourrait se passer de quelques recommandations de l&#8217;eXtreme Programming.</p>
@@ -811,16 +828,16 @@ Ces deux caractéristiques constituent la règle : <strong>Une Fois et Une Seule
 <a href="#_footnoteref_1">1</a>. <a href="https://www.zdnet.fr/actualites/linus-torvalds-parle-en-toute-franchise-des-bugs-de-securite-d-intel-39873065.htm" class="bare">https://www.zdnet.fr/actualites/linus-torvalds-parle-en-toute-franchise-des-bugs-de-securite-d-intel-39873065.htm</a>
 </div>
 <div class="footnote" id="_footnote_2">
-<a href="#_footnoteref_2">2</a>. Design Patterns est un livre de méthodologie appliquée à la conception logicielle écrit par Erich Gamma, Richard Helm, Ralph Johnson et John Vlissides et publié en 1994 chez Addison-Wesley. Cet ouvrage aborde le sujet de la programmation orientée objet et introduit le concept des patrons de conception. <a href="https://fr.wikipedia.org/wiki/Design_Patterns">Wikipédia</a>
+<a href="#_footnoteref_2">2</a>. <a href="https://fr.wikipedia.org/wiki/Surface_d%27attaque#R%C3%A9duction_de_la_surface_d&#8217;attaque">Surface d&#8217;attaque - wikipédia</a>
 </div>
 <div class="footnote" id="_footnote_3">
-<a href="#_footnoteref_3">3</a>. <a href="https://fr.wikipedia.org/wiki/Surface_d%27attaque#R%C3%A9duction_de_la_surface_d&#8217;attaque">Surface d&#8217;attaque - wikipédia</a>
+<a href="#_footnoteref_3">3</a>. Design Patterns est un livre de méthodologie appliquée à la conception logicielle écrit par Erich Gamma, Richard Helm, Ralph Johnson et John Vlissides et publié en 1994 chez Addison-Wesley. Cet ouvrage aborde le sujet de la programmation orientée objet et introduit le concept des patrons de conception. <a href="https://fr.wikipedia.org/wiki/Design_Patterns">Wikipédia</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.0<br>
-Last updated 2020-05-13 14:16:06 CEST
+Version 1.1<br>
+Last updated 2021-11-10 17:41:03 CET
 </div>
 </div>
 </body>
